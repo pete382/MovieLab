@@ -1,0 +1,32 @@
+﻿@model MModel
+
+
+<form asp-method="post" asp-action="MovieSearch">
+	<label for="title">Enter a movie title!</label>
+	<input type="text" name="title" id="title" />
+
+	<input type="submit" />
+
+</form>
+
+
+
+@{
+
+	if (Model != null)
+
+	{
+	
+		{
+		<h5>  @Html.DisplayNameFor(m => m.Title) </h5>
+		<h5> @Html.DisplayFor(m => m.Title) </h5>
+		}
+	}
+
+	else
+	{
+		<p>Search to see results</p>
+	}
+
+
+}
